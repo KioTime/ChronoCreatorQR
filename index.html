@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChronoCreatorQR</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <!-- Vinculamos el archivo CSS -->
+    <!-- Link to CSS file -->
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome para el icono de la flecha -->
+    <!-- Font Awesome for the arrow icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Icono Web -->
-    <link rel="icon" href="imagesQR/IconChronoGold.png" type="image/png">
+    <!-- Web icon -->
+    <link rel="icon" href="imagesQR/IconChronoGold.ico" type="image/png">
 </head>
+
 <body>
 
     <header>
         <div class="header-logo-container">
-            <img src="imagesQR/ChronoGold.png" alt="Logo" class="header-logo"> <!-- Ruta de tu logo -->
+            <img src="imagesQR/ChronoGold.png" alt="Logo" class="header-logo"> <!-- Logo image -->
         </div>
         <div class="container">
-            <h1>ChronoCreatorQR</h1> <!-- Título visible en la página -->
+            <h1>ChronoCreatorQR</h1> <!-- Page title -->
         </div>
     </header>
 
     <main>
         <div class="qr-generator">
-            <input type="text" id="url-input" placeholder="Introduce una URL o texto" />
+            <input type="text" id="url-input" placeholder="Enter a URL or text" />
             <div class="qr-buttons">
-                <button onclick="generateQR()">Generar QR</button>
-                <button onclick="downloadQR()">Descargar QR</button>
+                <button onclick="generateQR()">Generate QR</button>
+                <button onclick="downloadQR()">Download QR</button>
             </div>
         </div>
     
         <div class="qr-container" id="qrcode">
-            <!-- El QR generado aparecerá aquí -->
+            <!-- The generated QR code will appear here -->
         </div>
 
-        <!-- Botón con la flecha hacia la izquierda -->
+        <!-- Back button with left arrow -->
         <div class="back-button-container">
             <a href="https://kiotime.github.io/ChronoWebBasicTasks/">
                 <button class="back-button">
@@ -46,17 +48,19 @@
             </a>
         </div>
     </main>
-
+    
+    <!-- Footer -->
     <footer>
         <div class="footer-logo-container">
-            <img src="imagesQR/ChronoGold.png" alt="Logo" class="footer-logo"> <!-- Ruta a tu logo en el pie -->
+            <img src="imagesQR/ChronoGold.png" alt="Logo" class="footer-logo"> <!-- Footer logo -->
         </div>
-        <p>© 2025 ChronoCreatorQR. Todos los derechos reservados.</p>
+        <p>© 2025 ChronoCreatorQR. All rights reserved.</p>
     </footer>
 
-    <!-- Incluimos la librería de QRCode.js -->
+    <!-- Include the QRCode.js library -->
     <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
-    <!-- Vinculamos el archivo JavaScript -->
+    <!-- Link to JavaScript file -->
     <script src="script.js"></script>
 </body>
+
 </html>
