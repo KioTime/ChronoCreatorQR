@@ -22,13 +22,14 @@ body {
     color: var(--color-texto);
 }
 
-/* Cabecera */
+/* Encabezado */
 header {
     background-color: var(--color-fondo); /* Negro */
     color: var(--color-primario); /* Dorado */
     border-bottom: solid var(--color-boton-fondo); /* Dorado */
     text-align: center;
-    padding: 3.6rem 2rem 3.6rem 2rem; /* Ajuste para tener más espacio lateral */
+    padding: 3.6rem;
+    padding-left: 0;
     width: 100%;
     position: fixed;
     top: 0;
@@ -36,8 +37,13 @@ header {
     z-index: 1000;
     display: flex;
     align-items: center;
-    justify-content: center; /* Centrado horizontal */
-    box-sizing: border-box;
+    justify-content: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem; /* Aumentado el tamaño del título */
+    font-weight: 600; /* Negrita para destacar */
 }
 
 /* Contenedor para el logo en el header */
@@ -45,19 +51,12 @@ header {
     display: flex;
     align-items: center;
     margin-right: 2rem; /* Espacio entre el logo y el título */
-    margin-left: 1rem; /* Añadimos un margen izquierdo para separarlo un poco más */
 }
 
 /* Logo en el header */
-header .header-logo {
+.header-logo {
     width: 4rem; /* Ajustamos el tamaño del logo */
     height: auto;
-}
-
-/* Título en el header */
-header h1 {
-    font-size: 2.4rem; /* Ajustamos el tamaño del título */
-    margin-left: 1rem; /* Asegura que haya un espacio entre el logo y el título */
 }
 
 /* Contenido principal */
@@ -193,11 +192,9 @@ footer p {
 /* Media Query para pantallas grandes (2560px o más) */
 @media (min-width: 2560px) {
     header h1 {
-        font-size: 6.5rem; /* Aumentamos el tamaño del título en pantallas grandes */
+        font-size: 2.5rem; /* Reducimos el tamaño del título en pantallas más pequeñas */
     }
-    header .header-logo {
-        width: 6rem;
-    }
+
     .qr-generator {
         margin-top: 6rem ;
     }
@@ -212,9 +209,16 @@ footer p {
 /* Media Queries (para pantallas menores o igual a 768px) */
 @media (max-width: 768px) {
     header h1 {
-        display: none; /* Ocultamos el título */
+        font-size: 2.5rem; /* Reducimos el tamaño del título en pantallas más pequeñas */
+    }
+    main {
+        padding: 5rem 1rem; /* Ajuste en los márgenes */
     }
 
+    header .header-logo {
+        width: 4rem;
+        height: auto;
+    }
     .qr-generator {
         margin-top: 6rem ;
     }
@@ -239,14 +243,6 @@ footer p {
 
     }
 
-    main {
-        padding: 5rem 1rem; /* Ajuste en los márgenes */
-    }
-
-    header .header-logo {
-        width: 3rem;
-    }
-
     footer .footer-logo {
         width: 2rem;
     }
@@ -259,7 +255,13 @@ footer p {
 /* Media Queries (para pantallas menores o igual a 425px) */
 @media (max-width: 425px) {
     header h1 {
-        display: none; /* Ocultamos el título */
+        display: none; /* Oculta el título completamente */
+    }
+
+    header .header-logo {
+        width: 4rem; /* Ajustamos el tamaño del logo */
+        height: auto;
+        margin-left: 3rem;
     }
 
     .qr-generator input {
@@ -316,5 +318,3 @@ footer p {
         padding: 3rem 0.3rem;
     }
 }
-
-
